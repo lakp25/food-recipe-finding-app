@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+
+/* general style */
+*, *::after, *::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    color: #fff;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Nunito', sans-serif;
+    font-size: 100%;
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* section style */
+#searchsection{
+    padding: 2rem 0;
+}
+
+.container{
+    /* border: 3px solid green; */
+    height: auto;
+    /* max-width: 1200px; */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.brand{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+form{
+    margin: 1rem 0;
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+form > span{
+    font-size: 1.5rem;
+}
+
+input[type="text"]{
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid #000;
+    background: none;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+input::placeholder{
+    font-size: 1.2rem;
+}
+
+input[type="text"]:focus{
+    /* border: none; */
+    outline: none;
+    border-bottom: 3px solid #0423aa;
+    transition: 2s all linear;
+}
+
+.search-result{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:1rem 2rem;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+
+.item{
+
+    text-align: center;
+    padding: 1.5rem 0;
+    /* width: 70%; */
+}
+
+img{
+    width: 75%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    
+}
+img:hover{
+    transform: scale(1.2);
+    transition: all 2s linear;
+}
+
+.view-btn{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: navy;
+    color: #fff;
+    border-radius: 6px;
+}
+
+
+.item-data{
+    margin-top: 1.2rem;
+}
+
+.item-data .subtitle{
+    color: rgb(81, 186, 194);
+}
+
+.title{
+    margin-bottom: 2rem;
+    color: rgb(241, 234, 241);
+}
+
+
+.errordiv .errortitle{
+    text-align: center;
+    color: rgb(245, 12, 12);
+    font-style: italic;
+    font-weight: bolder;
+}
+
+/* ========Media Query====== */
+@media(max-width:768px){
+
+    .brand{
+        font-size: 1.5rem;
+
+    }
+}
+
+@media(max-width:576px){
+
+    .search-result{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap:5rem 2rem;
+        align-items: center;
+        padding-bottom: 5rem;
+    }
+}
